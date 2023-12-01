@@ -1,65 +1,149 @@
-# Code-challenge
-# REACT APPLICATION THAT FETCHES DATA FROM A JSON SERVER AND DISPLAYS IT USING VARIOUS COMPONENTS.
-# USAGE:
-* Ensure that you have React installed in your project.
+# Bank of Flatiron
 
-* bash
-* Copy code
-* npm install react
-* Component Integration:
-* Import the Form component into your desired file.
+Bank App is a web application built on React that displays a list of your recent bank transactions, among other features.
+Learning Goals
 
-jsx
-Copy code
-import React from 'react';
-import Form from './path/to/Form';
-Rendering the Form:
-Include the <Form /> component within your parent component's render method.
+# Implement a mini web app to practice on React:
 
-jsx
-Copy code
-function YourComponent() {
-  return (
-    <div>
-      {/* Other components */}
-      <Form />
-      {/* Other components */}
-    </div>
-  );
-}
-Form Fields:
-The form includes the following fields:
+    Components,
+    Props,
+    State,
+    Events and data fetching
 
-Date: Allows users to select a date.
-Description: Captures a brief description of the transaction.
-Category: Specifies the category of the transaction.
-Amount: Records the transaction amount.
-Ensure that all fields marked with an asterisk (*) are filled in before submitting the form.
+# Technologies Used
 
-Adding a Transaction:
-Click the "Add transaction" button to submit the form and add a new transaction.
-This form component assumes the existence of a parent component managing state and handling the submission of the form data.
-Feel free to customize the form component and integrate it seamlessly into your React application!
+The following have been used on this project:
 
-Components
-Header
-The header component provides the title of the application.
+    HTML
+    CSS
+    JavaScript/React
 
-SearchBar
-A simple search bar to filter transactions.
+# Project Setup & Pre-requisite Data
 
-Form
-The form component allows users to input transaction details, including date, description, category, and amount. Click the "Add transaction" button to submit a new transaction.
+    In your project directory, create a db.json file and use the json data below for your server DB.
 
-TableTransaction
-This component displays the transaction data in a table format.
+    {
+      "transactions": [
+        {
+          "id": 1,
+          "date": "2019-12-01",
+          "description": "Paycheck from Bob's Burgers",
+          "category": "Income",
+          "amount": 1000
+        },
+        {
+          "id": 2,
+          "date": "2019-12-01",
+          "description": "South by Southwest Quinoa Bowl at Fresh & Co",
+          "category": "Food",
+          "amount": -10.55
+        },
+        {
+          "id": 3,
+          "date": "2019-12-02",
+          "description": "South by Southwest Quinoa Bowl at Fresh & Co",
+          "category": "Food",
+          "amount": -10.55
+        },
+        {
+          "id": 4,
+          "date": "2019-12-04",
+          "description": "Sunglasses, Urban Outfitters",
+          "category": "Fashion",
+          "amount": -24.99
+        },
+        {
+          "id": 5,
+          "date": "2019-12-06",
+          "description": "Venmo, Alice Pays you for Burrito",
+          "category": "Food",
+          "amount": 8.75
+        },
+        {
+          "id": 6,
+          "date": "2019-12-06",
+          "description": "Chipotle",
+          "category": "Food",
+          "amount": -17.59
+        },
+        {
+          "id": 7,
+          "date": "2019-12-07",
+          "description": "Birthday Check from Grandma",
+          "category": "Gift",
+          "amount": 50
+        },
+        {
+          "id": 8,
+          "date": "2019-12-09",
+          "description": "Lyft Ride",
+          "category": "Transportation",
+          "amount": -13.25
+        },
+        {
+          "id": 9,
+          "date": "2019-12-11",
+          "description": "Paycheck from Bob's Burgers",
+          "category": "Income",
+          "amount": 1000
+        },
+        {
+          "id": 10,
+          "date": "2019-12-16",
+          "description": "Tickets, Flatiron Multiplex Cinemas",
+          "category": "Entertainment",
+          "amount": -24
+        },
+        {
+          "id": 11,
+          "date": "2019-12-16",
+          "description": "MTA Vending Machine: MetroCard",
+          "category": "Transportation",
+          "amount": -116.39
+        },
+        {
+          "id": 12,
+          "date": "2019-12-17",
+          "description": "Venmo, Pay Roommate for Rent",
+          "category": "Housing",
+          "amount": -975
+        },
+        {
+          "date": "2022-07-09",
+          "description": "Office lunch",
+          "category": "Food",
+          "amount": "2000",
+          "id": 13
+        },
+        {
+          "date": "2022-07-09",
+          "description": "Office lunch Wednesday",
+          "category": "Food",
+          "amount": "3000",
+          "id": 14
+        }
+      ]
+    }
 
-Fetching Data
-The application fetches transaction data from a JSON server:
-Contributing
-Feel free to contribute to the development of this project. Fork the repository, make your changes, and submit a pull request.
+    Run this command to get the backend started: json-server --watch db.json
 
-License
-This project is licensed under the MIT License.
+    Test your server by visiting this route in the browser http://localhost:8001/transactions
 
-Author: Raymond Mwaiki
+Core Deliverables
+
+As a user, you'll be able to:
+
+    See a table of all transactions
+    Fill out and submit the form to add a new transaction. This should add the new transaction to the table
+    Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table.
+
+# Bonus Deliverables
+
+As a user, you'll be able to:
+
+    Sort transactions alphabetically by category or description.
+    Delete a transaction which will remove it from the table
+
+# Author
+
+    James Kinyanjui
